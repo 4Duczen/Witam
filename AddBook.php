@@ -25,12 +25,12 @@
         <main class="grid-4">
   
 <form id="forum">
- <input type="text" id="fname"  class="input" name="fname" placeholder="Tytuł książki">
- <input type="text" id="lname" class="input" name="lname"  placeholder="Imię i nazwisko autora">
- <input type="text" id="pname" class="input" name="pname" placeholder="Kod ISBN">
- <input type="date" id="dname" class="input" name="dname">
- <input type="text" id="ename" class="input" name="ename" placeholder="Ilość egzemplarzy">
- <input type="submit" value="Dodaj książkę" class="input">
+        <input type="text" id="tytulname"  class="input" name="tytulname" placeholder="Tytuł książki">
+        <input type="text" id="lname" class="input" name="lname"  placeholder="Imię i nazwisko autora">
+        <input type="text" id="isbname" class="input" name="isbname" placeholder="Kod ISBN">
+        <input type="date" id="dname" class="input" name="dname">
+        <input type="text" id="ename" class="input" name="ename" placeholder="Ilość egzemplarzy">
+        <input type="submit" value="Dodaj książkę" >
  
 </form>
         </main>

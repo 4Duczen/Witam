@@ -21,10 +21,10 @@ form.addEventListener("submit", (event) => {
 		let error = null;
 
 		switch (input.id) {
-			case "fname":
+			case "tytulname":
 				error = validateTytul(input.value);
 				break;
-			case "pname":
+			case "isbname":
 				error = validateISBN(input.value);
 				break;
 			case "ename":
@@ -57,33 +57,33 @@ form.addEventListener("submit", (event) => {
 	}
 });
 
-function validateTytul(fname) {
-	const isNotEmpty = tytul.length > 0;
-	const isNotBig = tytul.length <= 128;
+function validateTytul(tytulname) {
+	const isNotEmpty = tytulname.length > 0;
+	const isNotBig = tytulname.length <= 128;
 
 	const isValid = isNotEmpty && isNotBig;
 
 	if (!isValid) {
-		return "Tytuł jest nieprawidłowy";
+		return "Tytuł jest niepoprawny";
 	}
 
 	return null;
 }
 
-function validateISBN(pname) {
-	const isISBN = /^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$/gm.test(kodisbn);
+function validateISBN(isbname) {
+	const isISBN = /^(?=(?:\D*\d){10}(?:(?:\D*\d){3})?$)[\d-]+$/gm.test(isbname);
 
 	isValid = isISBN;
 
 	if (!isValid) {
-		return "Kod ISBN jest nieprawidłowy";
+		return "Kod ISBN jest niepoprawny";
 	}
 
 	return null;
 }
 
 function validateIloscEgzemplarzy(ename) {
-	const isNotEmpty = iloscegzemplarzy.length > 0;
+	const isNotEmpty = ename.length > 0;
 
 	const isValid = isNotEmpty;
 
